@@ -5,3 +5,93 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin: 10px;
+}
+
+form {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+fieldset {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 95vw;
+  border: 1px solid rgba(0, 0, 0, 0.468);
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+fieldset > legend {
+  font-weight: bold;
+}
+
+label {
+  color: rgb(85, 85, 85);
+  font-weight: bold;
+  margin-top: 13px;
+  margin-bottom: 8px;
+}
+
+fieldset > input,
+fieldset > select {
+  font-size: 17px;
+  width: 95%;
+  border: 1px solid rgba(0, 0, 0, 0.468);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* fieldset > p {
+  font-size: 0.8em;
+  margin-top: 10px;
+} */
+
+/* #termos {
+  margin-right: -50px;
+} */
+
+input[type="submit"] {
+  background-image: linear-gradient(to bottom, rgb(232, 232, 232), darkgray);
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.216);
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.468);
+  font-weight: bold;
+}
+
+input[type="submit"]:hover {
+  background-image: linear-gradient(to left, darkgray, rgb(232, 232, 232));
+}
+
+@media screen and (min-width: 850px) and (max-width: 1199px) {
+  body {
+    font-size: 1.1em;
+  }
+
+  fieldset {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: 1.2em;
+  }
+
+  fieldset {
+    width: 70%;
+  }
+}

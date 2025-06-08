@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="img/form-icon.png" type="image/x-icon" />
+  </head>
+  <body>
+    <h1>Formulário de Cadastro de Evento</h1>
+
+    <form action="cadastro.js" method="post" autocomplete="on">
+      <fieldset>
+        <legend>Informações Gerais</legend>
+        <label for="event_name">Nome do Evento:</label>
+        <input
+          type="text"
+          name="event_name"
+          id="event_name"
+          minlength="5"
+          maxlength="100"
+          placeholder="Ex: Conferência de Tecnologia"
+          autocomplete="off"
+          required
+        />
+
+        <label for="event_type">Tipo de Evento:</label>
+        <select name="event_type" id="event_type" required>
+          <option value="">--Selecione um Tipo--</option>
+
+          <optgroup label="Informática">
+            <option>Informática Básica</option>
+            <option>Programação Móvel</option>
+            <option>Programação Web</option>
+          </optgroup>
+
+          <optgroup label="Eletrotécnica">
+            <option>Eletricidade Básica</option>
+            <option>Eletrostática</option>
+          </optgroup>
+
+          <optgroup label="Segurança">
+            <option>Ergônomia</option>
+          </optgroup>
+        </select>
+
+        <label for="event_date">Data do Evento:</label>
+        <input type="date" name="event_date" id="event_date" required />
+
+        <label for="event_time">Hora do Evento:</label>
+        <input type="time" name="event_time" id="event_time" required />
+
+        <label for="event-locat">Local do Evento:</label>
+        <input
+          type="text"
+          name="event-locat"
+          id="event-locat"
+          placeholder="Ex: Centro de Convenções X"
+          autocomplete="off"
+          required
+        />
+      </fieldset>
+
+      <fieldset>
+        <legend>Detalhes Adicionais</legend>
+        <label for="num_people">Número Máximo de Participantes:</label>
+        <input
+          type="number"
+          name="num_people"
+          id="num_people"
+          step="10"
+          min="10"
+          max="1000"
+          value="50"
+          required
+        />
+
+        <label for="email">E-mail para Contato:</label>
+        <input type="email" name="email" id="email" autocomplete="email" placeholder="email@exemplo.com" required />
+
+        <label for="tel">Telefone para Contato:</label>
+          <input
+            type="tel"
+            name="tel"
+            id="tel"
+            autocomplete="tel"
+            pattern="^\(\d{2}\)\d{4,5}-\d{4}$"
+            placeholder="(XX)XXXXX-XXXX"
+            required
+          />
+      </fieldset>
+
+      <div id="termos">
+        <input type="checkbox" name="termos" id="termos" required />
+        <label for="termos"
+          >Eu li e concordo com os <a href="#">Termos e Condições.</a></label
+        >
+      </div>
+
+      <input type="submit" value="Cadastrar Evento" />
+    </form>
+  </body>
+</html>
