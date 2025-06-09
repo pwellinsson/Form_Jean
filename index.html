@@ -10,7 +10,7 @@
   <body>
     <h1>Formulário de Cadastro de Evento</h1>
 
-    <form action="cadastro.js" method="post" autocomplete="on">
+    <form action="https://script.google.com/macros/s/AKfycbwgM74QGRE05y_IY2bhSZGravFaoN12p75afyZp0mOjw9HEX20wz-IeORjJUAJHn2m5/exec" method="post" autocomplete="on">
       <fieldset>
         <legend>Informações Gerais</legend>
         <label for="event_name">Nome do Evento:</label>
@@ -77,18 +77,70 @@
         />
 
         <label for="email">E-mail para Contato:</label>
-        <input type="email" name="email" id="email" autocomplete="email" placeholder="email@exemplo.com" required />
+        <input
+          type="email"
+          name="email"
+          id="email"
+          autocomplete="email"
+          placeholder="email@exemplo.com"
+          required
+        />
 
         <label for="tel">Telefone para Contato:</label>
-          <input
-            type="tel"
-            name="tel"
-            id="tel"
-            autocomplete="tel"
-            pattern="^\(\d{2}\)\d{4,5}-\d{4}$"
-            placeholder="(XX)XXXXX-XXXX"
-            required
-          />
+        <input
+          type="tel"
+          name="tel"
+          id="tel"
+          autocomplete="tel"
+          pattern="^\(\d{2}\)\d{4,5}-\d{4}$"
+          placeholder="(XX)XXXXX-XXXX"
+          required
+        />
+        <label for="public">Público Alvo</label>
+        <div id="public">
+          <div class="public">
+            <input type="checkbox" name="student" id="student" value="Estudante" checked />
+            <label for="student">Estudantes</label>
+          </div>
+          <div class="public">
+            <input type="checkbox" name="profes" id="profes" value="Profissional" />
+            <label for="profes">Profissional</label>
+          </div>
+          <div class="public">
+            <input type="checkbox" name="researc" id="researc" value="Pesquisador" />
+            <label for="researc">Pesquisadores</label>
+          </div>
+          <div class="public">
+            <input type="checkbox" name="gener_pub" id="gener_pub" value="Público Geral" />
+            <label for="gener_pub">Público Geral</label>
+          </div>
+        </div>
+
+        <label for="level">Nível de Dificuldade</label>
+        <div id="public">
+          <div class="public">
+            <input type="radio" name="level" id="basic" value="Básico" />
+            <label for="basic">Básico</label>
+          </div>
+          <div class="public">
+            <input type="radio" name="level" id="intermediate" value="Intermediário" checked />
+            <label for="intermediate">Intermediário</label>
+          </div>
+          <div class="public">
+            <input type="radio" name="level" id="advanced" value="Avançado" />
+            <label for="advanced">Avançado</label>
+          </div>
+        </div>
+
+        <label for="event_desc">Descrição do Evento:</label>
+        <textarea
+          name="event_desc"
+          id="event_desc"
+          cols="10"
+          rows="5"
+          minlength="20"
+          placeholder="Forneça uma descrição detalhada do evento..."
+        ></textarea>
       </fieldset>
 
       <div id="termos">
